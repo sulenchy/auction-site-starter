@@ -1,11 +1,28 @@
-import '/style.css'
-import javascriptLogo from '/javascript.svg'
-import viteLogo from '/vite.svg'
+import '../styles/style.css'
+import { footer, header } from './components';
+import { home } from './pages';
+import singup from './pages/signup';
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <h1>Auction site</h1>
-  </div>
-`
+function main() {
+  // load the header
+  const headerContainer = document.getElementById('header');
+  const headerElements = header();
+  headerContainer.innerHTML = headerElements;
+  // load the main content here
+  const mainContent = document.getElementById('main-content');
+  const path = document.location.pathname;
+  switch(path) {
+    case '/':
+      mainContent.innerHTML = home();
+      break;
+    case '/signup':
+      mainContent.innerHTML = singup();
+  }
+  // load the footer content
+  const footerContainer = document.getElementById('footer');
+  const footerElements = footer();
+  footerContainer.innerHTML = footerElements;
+}
 
 
+main();
