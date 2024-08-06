@@ -1,3 +1,5 @@
+import { searchBar, card } from "../components";
+
 export default function home() {
 
     const loginForm = `
@@ -39,34 +41,24 @@ export default function home() {
     //     })
     // }
 
+    const searchBarElements = searchBar();
+    const cardElement = card();
+    const loaderElement = loader();
     const isUserLoggedIn = false 
     return  isUserLoggedIn ? 
     loginForm
     :
     `
     <div class="max-w-6xl mx-auto my-10">
-    <!-- Search Bar -->
-    <div class="flex justify-center mb-6">
-      <input class="w-full max-w-lg px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" type="text" placeholder="Search..." id="searchInput">
-    </div>
+        <!-- Search Bar -->
+        ${searchBarElements}
     
-    <!-- Card List -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="bg-white p-4 rounded-lg shadow-lg">
-        <img class="w-full h-40 object-cover rounded-md mb-4" src="https://via.placeholder.com/150" alt="Card Image">
-        <h3 class="text-xl font-semibold mb-2">Card Title 1</h3>
-        <p class="text-gray-700">This is a short description of the card. It gives a brief overview of the content.</p>
-      </div>
-      <div class="bg-white p-4 rounded-lg shadow-lg">
-        <img class="w-full h-40 object-cover rounded-md mb-4" src="https://via.placeholder.com/150" alt="Card Image">
-        <h3 class="text-xl font-semibold mb-2">Card Title 2</h3>
-        <p class="text-gray-700">This is a short description of the card. It gives a brief overview of the content.</p>
-      </div>
-      <div class="bg-white p-4 rounded-lg shadow-lg">
-        <img class="w-full h-40 object-cover rounded-md mb-4" src="https://via.placeholder.com/150" alt="Card Image">
-        <h3 class="text-xl font-semibold mb-2">Card Title 2</h3>
-        <p class="text-gray-700">This is a short description of the card. It gives a brief overview of the content.</p>
-      </div>
+        <!-- Card List -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            ${cardElement}
+            ${cardElement}
+            ${cardElement}
+        </div>
     </div>
     `;
 }
