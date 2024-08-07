@@ -1,4 +1,4 @@
-export default function card() {
+export default function getCard() {
     return `
         
         <div class="bg-white p-4 rounded-lg shadow-lg">

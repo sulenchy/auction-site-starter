@@ -1,13 +1,13 @@
-import card from './card.js';
-import footer from './footer.js';
-import header from './header.js'
-import loader from './loader.js';
-import searchBar from './searchBar.js';
+import getCard from './card.js';
+import getFooter from './footer.js';
+import getHeader from './header.js'
+import getLoader from './loader.js';
+import getSearchBar from './searchBar.js';
 
 export {
-    header,
-    footer,
-    loader,
-    card,
-    searchBar
+    getHeader,
+    getFooter,
+    getLoader,
+    getCard,
+    getSearchBar
 }

@@ -1,4 +1,4 @@
-import { searchBar, card } from "../components";
+import { getSearchBar, getCard } from "../components";
 
 export default function home() {
 
@@ -41,9 +41,8 @@ export default function home() {
     //     })
     // }
 
-    const searchBarElements = searchBar();
-    const cardElement = card();
-    const loaderElement = loader();
+    const searchBarElements = getSearchBar();
+    const cardElement = getCard();
     const isUserLoggedIn = false 
     return  isUserLoggedIn ? 
     loginForm

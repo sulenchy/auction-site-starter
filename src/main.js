@@ -1,12 +1,12 @@
 import '../styles/style.css'
-import { footer, header } from './components';
+import { getFooter, getHeader } from './components';
 import { home } from './pages';
 import singup from './pages/signup';
 
 function main() {
   // load the header
   const headerContainer = document.getElementById('header');
-  const headerElements = header();
+  const headerElements = getHeader();
   headerContainer.innerHTML = headerElements;
   // load the main content here
   const mainContent = document.getElementById('main-content');
@@ -20,7 +20,7 @@ function main() {
   }
   // load the footer content
   const footerContainer = document.getElementById('footer');
-  const footerElements = footer();
+  const footerElements = getFooter();
   footerContainer.innerHTML = footerElements;
 }
 
